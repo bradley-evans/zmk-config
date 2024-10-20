@@ -26,6 +26,16 @@
         };
     };
 
+    power {
+        compatible = "zmk,power";
+        on-usb-connected = &rgb_ug {
+            status = "okay";
+        };
+        on-battery = &rgb_ug {
+            status = "disabled";
+        }; 
+    }; 
+
     keymap {
         compatible = "zmk,keymap";
 
