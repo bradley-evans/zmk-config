@@ -53,7 +53,7 @@
 &kp EQUAL      &kp N1       &kp N2          &kp N3    &kp N4     &kp N5                                &kp N6     &kp N7      &kp N8     &kp N9      &kp N0           &kp MINUS
 &kp DEL        &kp Q        &kp W           &kp E     &kp R      &kp T                                 &kp Y      &kp U       &kp I      &kp O       &kp P            &kp BACKSLASH
 &kp BACKSPACE  &lt 1 A      &kp S           &kp D     &kp F      &kp G                                 &kp H      &kp J       &kp K      &kp L       &lt 1 SEMICOLON  &mt LGUI SQT
-&kp LSHFT      &mt LCTRL Z  &mt LEFT_ALT X  &kp C     &kp V      &kp B      &lt 2 C_MUTE     &kp CAPS  &kp N      &kp M       &kp COMMA  &kp PERIOD  &mt RCTRL FSLH   &kp RSHIFT
+&kp LSHFT      &mt LCTRL Z  &mt LEFT_ALT X  &kp C     &kp V      &kp B      &lt 3 C_MUTE     &kp CAPS  &kp N      &kp M       &kp COMMA  &kp PERIOD  &mt RCTRL FSLH   &kp RSHIFT
                             &kp LGUI        &kp HOME  &kp LCTRL  &kp SPACE  &kp BACKSPACE    &kp TAB   &kp ENTER  &kp ESCAPE  &kp END    &kp RGUI
             >;
 
@@ -67,11 +67,26 @@
 &kp F1        &kp F2           &kp F3       &kp F4                &kp F5                 &kp F6                         &kp F7         &kp F8     &kp F9  &kp F10    &kp F11    &kp F12
 &trans        &kp EXCLAMATION  &kp AT_SIGN  &kp LEFT_BRACE        &kt RIGHT_BRACE        &kt EQUAL                      &kp LC(C)      &kp LC(Z)  &trans  &trans     &kp LC(V)  &trans
 &kp LEFT_WIN  &kp HASH         &kp DOLLAR   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE                      &kp LEFT       &kp DOWN   &kp UP  &kp RIGHT  &trans     &trans
-&trans        &kp PERCENT      &kp CARET    &kp LEFT_BRACKET      &kt RIGHT_BRACKET      &kp PIPE     &trans    &trans  &trans         &trans     &trans  &trans     &trans     &trans
+&trans        &kp PERCENT      &kp CARET    &kp LEFT_BRACKET      &kt RIGHT_BRACKET      &kp PIPE     &trans    &to 2   &trans         &trans     &trans  &trans     &trans     &trans
                                &trans       &kp LESS_THAN         &kp GREATER_THAN       &kp PAGE_UP  &trans    &trans  &kp PAGE_DOWN  &trans     &trans  &trans
             >;
 
             label = "code";
+        };
+
+        game {
+            display-name = "default";
+            bindings = <
+&kp EQUAL      &kp N1       &kp N2          &kp N3    &kp N4     &kp N5                               &kp N6     &kp N7      &kp N8     &kp N9      &kp N0          &kp MINUS
+&kp DEL        &kp Q        &kp W           &kp E     &kp R      &kp T                                &kp Y      &kp U       &kp I      &kp O       &kp P           &kp BACKSLASH
+&kp BACKSPACE  &kp A        &kp S           &kp D     &kp F      &kp G                                &kp H      &kp J       &kp K      &kp L       &kp SEMICOLON   &mt LGUI SQT
+&kp LSHFT      &mt LCTRL Z  &mt LEFT_ALT X  &kp C     &kp V      &kp B      &lt 3 C_MUTE     &to 0    &kp N      &kp M       &kp COMMA  &kp PERIOD  &mt RCTRL FSLH  &kp RSHIFT
+                            &kp LGUI        &kp HOME  &kp LCTRL  &kp SPACE  &kp BACKSPACE    &kp TAB  &kp ENTER  &kp ESCAPE  &kp END    &kp RGUI
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp DOWN UP>;
         };
 
         config {
