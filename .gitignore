@@ -1,0 +1,4 @@
+modules/
+.west/
+zmk/
+zephyr/
