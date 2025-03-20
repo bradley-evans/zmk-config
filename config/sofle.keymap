@@ -99,5 +99,15 @@
 
             label = "config";
         };
+
+        math {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans     &trans  &trans      &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans     &trans  &trans      &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans     &trans  &trans      &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans  &trans      &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp KP_N0  &trans  &kp KP_DOT
+            >;
+        };
     };
 };
